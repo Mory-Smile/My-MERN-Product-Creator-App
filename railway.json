@@ -4,13 +4,14 @@
     "nixpacksPlan": {
       "phases": {
         "setup": {
-          "nixPkgs": ["nodejs-18_x", "npm"]
+          "nixPkgs": ["nodejs-18_x"]
         }
-      }
-    },
-    "rootDirectory": "backend"
+      },
+      "providers": ["node"]
+    }
   },
   "deploy": {
     "startCommand": "npm start"
-  }
+  },
+  "rootDirectory": "backend"
 }
