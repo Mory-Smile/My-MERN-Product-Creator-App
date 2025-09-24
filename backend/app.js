@@ -7,10 +7,14 @@ import productRoutes from "./routes/product.route.js";
 import cors from "cors";
 
 const corsOptions = {
-  origin: ["https://my-mern-product-creator-app-fro.vercel.app/"],
+  origin: [
+    "https://my-mern-product-creator-app-fro.vercel.app/",
+    "https://*.vercel.app",
+  ],
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 200,
 };
 
 dotenv.config();
