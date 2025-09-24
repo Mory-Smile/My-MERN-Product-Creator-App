@@ -4,6 +4,14 @@ import path from "path";
 
 import { connectDB } from "./config/db.js";
 import productRoutes from "./routes/product.route.js";
+import cors from "cors";
+
+const corsOptions = {
+  origin: ["https://my-mern-product-creator-app-fro.vercel.app/"],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
 
 dotenv.config();
 
@@ -15,6 +23,8 @@ const __dirname = path.resolve();
 app.use(express.json());
 
 app.use("/api/products", productRoutes);
+
+app.use(cors(corsOptions));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
