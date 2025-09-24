@@ -1,7 +1,13 @@
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "npm install",
+    "nixpacksPlan": {
+      "phases": {
+        "setup": {
+          "nixPkgs": ["nodejs-18_x", "npm"]
+        }
+      }
+    },
     "rootDirectory": "backend"
   },
   "deploy": {
