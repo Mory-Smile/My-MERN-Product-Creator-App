@@ -8,7 +8,7 @@ import cors from "cors";
 
 const corsOptions = {
   origin: [
-    "https://my-mern-product-creator-app-fro.vercel.app/",
+    "https://my-mern-product-creator-app-fro.vercel.app",
     "https://*.vercel.app",
   ],
   credentials: true,
