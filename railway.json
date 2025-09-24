@@ -12,6 +12,6 @@
     }
   },
   "deploy": {
-    "startCommand": "npm start"
+    "startCommand": "cd backend && npm start"
   }
 }
